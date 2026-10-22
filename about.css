@@ -1,0 +1,23 @@
+ 
+    .section-title {
+      font-weight: 600;
+      color: #0a3159;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: #2a5298;
+    }
+   .feature-card {
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    color: #16366c;
+  }

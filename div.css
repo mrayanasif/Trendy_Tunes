@@ -1,0 +1,132 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #333;
+  padding: 10px 20px;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Each dropdown container */
+.dropdown {
+  position: relative;
+  flex: 1 1 140px;
+  max-width: 180px;
+  text-align: center;
+}
+
+/* Dropdown button with underline animation */
+.dropbtn {
+  position: relative;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* Underline element for dropbtn */
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #A1104C, #FF3366);
+  transition: width 0.5s ease-in-out;
+  border-radius: 3px;
+}
+
+/* Show underline and change text color on hover */
+.dropdown:hover > .dropbtn::after {
+  width: 100%;
+}
+
+.dropdown:hover > .dropbtn {
+  color: #8d1547;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(49, 45, 45);
+  min-width: 100%;
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
+  border-radius: 4px;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+/* Dropdown links with underline animation */
+.dropdown-content a {
+  position: relative;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+/* Underline for dropdown links */
+.dropdown-content a::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #A1104C, #a21c3e);
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+/* Show underline and change color on hover */
+.dropdown-content a:hover::after {
+  width: 100%;
+}
+
+.dropdown-content a:hover {
+  color: #A1104C;
+ 
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dropdown {
+    flex: none;
+    max-width: none;
+  }
+
+  .dropbtn {
+    text-align: left;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 0 0 4px 4px;
+  }
+}

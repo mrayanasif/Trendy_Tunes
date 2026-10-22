@@ -1,0 +1,84 @@
+
+    .carousel-wrapper::-webkit-scrollbar {
+    display: none; 
+    }
+     .carousel-wrapper {
+      overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 20px 40px;
+    }
+    .video-thumb {
+      display: inline-block;
+      width: 200px;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .video-thumb:hover {
+      transform: scale(1.05);
+    }
+    .video-title {
+      text-align: center;
+      font-weight: bolder;
+      text-transform: capitalize;
+      margin-top: 10px;
+    }
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      width: 50px;
+      height: 50px;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .carousel-left,.carousel-right {
+      display: none;
+    }
+
+     /* Album Css */
+.album-thumb {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Keeps a consistent rectangle shape */
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 8px;
+}
+
+.single-album-area {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.album-info h5 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #333;
+  text-transform: uppercase;
+}
+.album-info h5:hover {
+  color: #a73363;
+ cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px; 
+}
+
